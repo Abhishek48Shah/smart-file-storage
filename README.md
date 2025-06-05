@@ -17,7 +17,7 @@ A lightweight Node.js REST API for user authentication and file management with 
 - **Runtime**: Node.js with TypeScript
 - **Authentication**: JWT (JSON Web Tokens)
 - **File Processing**: Busboy for multipart form data
-- **Database**: Custom models (implementation not shown)
+- **Database**: Custom models 
 - **Security**: Bcrypt-like password hashing with salt
 
 ## Project Structure
@@ -133,7 +133,7 @@ Download a file by filename and ID.
 
 1. **Clone and install dependencies:**
 ```bash
-git clone <repository>
+git clone https://github.com/Abhishek48Shah/smart-file-storage
 cd fileExp
 npm install
 ```
@@ -194,29 +194,5 @@ curl "http://localhost:3000/download?filename=document.pdf&id=123" \
   -o partial_file.pdf
 ```
 
-## Database Schema (Expected)
 
-The API expects these database operations to be implemented:
-
-### Users Table
-- `id`: Primary key
-- `username`: User identifier
-- `email`: User email (unique)
-- `password`: Hashed password
-- `salt`: Password salt
-
-### Files Table
-- `id`: Primary key
-- `filename`: Original filename
-- `filepath`: Storage path
-- `user_id`: Owner user ID
-- `size`: File size in bytes
-
-## Contributing
-
-1. Follow TypeScript best practices
-2. Maintain error handling patterns
-3. Add proper type annotations
-4. Test file upload/download functionality
-5. Ensure security measures are preserved
 
